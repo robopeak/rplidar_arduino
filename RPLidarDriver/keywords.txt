@@ -1,0 +1,11 @@
+RPLidarMeasurement	KEYWORD1
+RPLidar	KEYWORD1
+begin	KEYWORD2
+end	KEYWORD2
+isOpen	KEYWORD2
+getHealth	KEYWORD2
+getDeviceInfo	KEYWORD2
+stop	KEYWORD2
+startScan	KEYWORD2
+waitPoint	KEYWORD2
+getCurrentPoint	KEYWORD2

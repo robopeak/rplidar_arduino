@@ -45,7 +45,7 @@ RPLidar::~RPLidar()
 }
 
 // open the given serial interface and try to connect to the RPLIDAR
-bool RPLidar::begin(HardwareSerial &serialobj)
+bool RPLidar::begin(SoftwareSerial &serialobj)
 {
     if (isOpen()) {
       end(); 
@@ -211,8 +211,12 @@ u_result RPLidar::waitPoint(_u32 timeout)
 
    _u8 recvPos = 0;
 
-   while ((remainingtime=millis() - currentTs) <= timeout) {
-        int currentbyte = _bined_serialdev->read();
+   int currentbyte = -1;
+   //By allowing the loop to continue as long as there is data read or the timeout has not yet been reached
+   //we avoid doing the time check on every byte. For most Arudinos this will increase the max number of samples
+   //that can processed per second by as much as 40% (tested on Arduino Leonardo) - avirtuos@
+   while (currentbyte != -1 || (remainingtime=millis() - currentTs) <= timeout) {
+        currentbyte = _bined_serialdev->read();
         if (currentbyte<0) continue;
 
         switch (recvPos) {

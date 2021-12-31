@@ -20,7 +20,7 @@
         "email": "danno@danno.org"
       }
     ],
-    "license": "MIT",
+    "license": "GPL-2.0-only",
     "frameworks": "*",
     "platforms": "*"
   }

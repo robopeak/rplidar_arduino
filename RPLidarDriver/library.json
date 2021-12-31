@@ -1,0 +1,26 @@
+{
+    "name": "RPLidar (DanCrank fork)",
+    "version": "1.0.2",
+    "description": "Local fork of RPLidar driver",
+    "keywords": "lidar, rplidar",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/DanCrank/rplidar_arduino"
+    },
+    "authors":
+    [
+      {
+        "name": "Robopeak",
+        "email": "support@robopeak.com",
+        "url": "https://www.robopeak.com"
+      },
+      {
+        "name": "Dan Crank",
+        "email": "danno@danno.org"
+      }
+    ],
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*"
+  }
